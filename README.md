@@ -1,4 +1,4 @@
-#WinRansomware
+##WinRansomware
 
 This code should be executed on virtual machines and is intended solely for educational purposes. Hacking is illegal, and I do not endorse any malicious use of this code. This should be used for educational purposes ONLY.
 
