@@ -1,10 +1,10 @@
-##WinRansomware
+# WinRansomware
 
 This code should be executed on virtual machines and is intended solely for educational purposes. Hacking is illegal, and I do not endorse any malicious use of this code. This should be used for educational purposes ONLY.
 
 This code creates a ransomware simulation that encrypts files in a specified folder and generates a ransom note asking for payment to decrypt the files.
 
-Key Functions
+# Key Functions
 
 generate_key(): Generates a new encryption key.
 
@@ -27,7 +27,7 @@ decrypt_directory(folder, key): Decrypts all files with specific extensions (.tx
 create_ransom_note(): Creates a ransom note containing a message and contact email for ransom payment instructions.
 
 
-Main Functionality
+# Main Functionality
 
 
 The main function orchestrates the following steps:
@@ -52,8 +52,8 @@ Deletes the secret.key file to simulate a real ransom scenario where the decrypt
 
 
 
-Execution
+# Execution
 
 When the script is run directly, the main function is called, initiating the encryption process and ransom note creation.
 
-Important: This code is a simulation and should be handled responsibly. Use it only in controlled environments to understand ransomware behavior and its implications.
+# Important: This code is a simulation and should be handled responsibly. Use it only in controlled environments to understand ransomware behavior and its implications.
