@@ -1,11 +1,30 @@
-# WinRansomware
-This should be executed on virtual machines, and it's for educational purposes. Hacking is illegal and I do not endorse any evil use of this code. This should be used for educational purposes ONLY. 
+#WinRansomware
 
+This code should be executed on virtual machines and is intended solely for educational purposes. Hacking is illegal, and I do not endorse any malicious use of this code. This should be used for educational purposes ONLY.
 
-This code creates a ransomware that encrypts files in specified folders and creates a ransom note to be displayed to the victim asking for payment to decrypt the files.
+This code creates a ransomware simulation that encrypts files in a specified folder and generates a ransom note asking for payment to decrypt the files.
 
-The create_ransomware function takes a list of folders to be encrypted and generates a new encryption key for each folder. It then encrypts all files in the folder using the generated key and writes a ransom note in each folder asking for payment to decrypt the files. The ransom note contains an email address to contact for instructions on how to pay the ransom and get the decryption key.
+Key Functions
 
-The ransom_note function creates a text file called "RANSOM_NOTE.txt" on the victim's desktop, containing the message that the victim has been infected with ransomware, and instructions on how to pay the ransom.
+generate_key(): Generates a new encryption key.
+save_key(key): Saves the generated key to a file named secret.key.
+load_key(): Loads the encryption key from the secret.key file.
+encrypt_file(file, key): Encrypts a given file using the provided key.
+decrypt_file(file, key): Decrypts a given file using the provided key.
+encrypt_directory(folder, key): Encrypts all files with specific extensions (.txt, .doc, .pdf) in the specified directory.
+decrypt_directory(folder, key): Decrypts all files with specific extensions (.txt, .doc, .pdf) in the specified directory.
+create_ransom_note(): Creates a ransom note containing a message and contact email for ransom payment instructions.
+Main Functionality
 
-The main function calls the create_ransomware function. Finally, the code checks if the script is being run directly and if so, calls the main function to execute the code.
+The main function orchestrates the following steps:
+
+Defines the path of the folder to be encrypted (/home/user).
+Generates a new encryption key and saves it to secret.key.
+Encrypts all files in the specified directory.
+Creates a ransom note at /home/user/ransom_note.txt.
+Deletes the secret.key file to simulate a real ransom scenario where the decryption key is not readily available.
+Execution
+
+When the script is run directly, the main function is called, initiating the encryption process and ransom note creation.
+
+Important: This code is a simulation and should be handled responsibly. Use it only in controlled environments to understand ransomware behavior and its implications.
